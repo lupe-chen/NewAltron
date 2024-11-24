@@ -7,7 +7,7 @@ body{
     font-family: "Noto Sans", Arial, Helvetica, sans-serif ;
     /* height: 100px; */
     background:linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), /* 垂直漸層 */
-        url('/img/kv-bg2.jpg') center/cover no-repeat;
+        url('./img/kv-bg2.jpg') center/cover no-repeat;
     background-attachment: fixed;
     background-size: 100vw;
     
