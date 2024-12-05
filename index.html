@@ -4,49 +4,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>05_陳若婷_ALTRON</title>
+    <title>ALTRON</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" /> -->
     <link rel="icon" href="img/icon-logo-color.svg">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/rwd.css">
 
 
-</head>  
+
+</head>
 
 <body>
     <div id="wrapper">
+        
+        <!------------------------------------------ menu ------------------------------------------>
+        <nav class="menu">
+            <div class="menu_left">
+                <a class="logo" href="#">
+                    <img src="./img/icon-logo-color.svg">
+                    <!-- <img src="./img/altron-w.svg"> -->
+                </a>
+            </div>
+            <div class="menu_right">
+                <ul class="navigation">
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">
+                            關於
+                            <img src="./img/icon16px-chevron-down.svg" alt="">
+                        </a>
+                        <ul class="submenu">
+                            <li><a href="#">關於我們</a></li>
+                            <li><a href="#">新聞中心</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">
+                            產品
+                            <img src="./img/icon16px-chevron-down.svg" alt="">
+                        </a>
+                        <ul class="submenu">
+                            <li><a href="#">自主移動機器人</a></li>
+                            <li><a href="#">協作機器人</a></li>
+                            <li><a href="#">自主移動機械生物</a></li>
+                            <li><a href="#">機械手臂</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">產業應用</a></li>
+                    <li><a href="#">技術支援</a></li>
+                </ul>
+
+                <ul class="language">
+                    <a href="#" class="language-default">
+                        繁中
+                        <span class="material-symbols-outlined">arrow_drop_down</span>
+                    </a>
+                    <li><a href="#">EN</a></li>
+                </ul>
+
+                <div class="member">
+                    <div id="myDropdown" class="login">
+                      <h5>登入帳戶</h5>
+                      <form class="form">
+                        <label for="username" class="required">帳號</label>
+                        <input type="text" id="username" name="username" placeholder="請輸入電子郵件或電話號碼" required>
+                        <label for="password" class="required">密碼</label>
+                        <input type="text" id="password" name="password" placeholder="密碼(區分大小寫)" required>
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" name="" id="" value="checkedValue" checked>
+                            記住我
+                          </label>
+                          <a href="#">忘記密碼？</a>
+                        </div>
+                        <button type="submit">登入</button>
+                      </form>
+                      <div class="signup">
+                        <small>尚未成為會員？</small>
+                        <a href="#">立即註冊</a>
+                      </div>
+                      <p>或選擇</p>
+                      <button>產品註冊</button>
+                    </div>
+
+                    <a href="#" onclick="myFunction(event)" class="dropbtn">
+                        <span class="material-symbols-outlined">login</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="mobile">
+            <div id="myNav" class="overlay mobile-menu">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <div class="overlay-content">
+                      <ul>
+                          <li>
+                              <a href="#">關於</a>
+                              <ul>
+                                  <li><a href="">關於我們</a></li>
+                                  <li><a href="">新聞中心</a></li>
+                              </ul>
+                             
+                          </li>
+                          <li>
+                              <a href="#">產品</a>
+                              <ul class="submenu">
+                                  <li><a href="">自主移動機器人</a></li>
+                                  <li><a href="">協作機器人</a></li>
+                                  <li><a href="">自主移動機械生物</a></li>
+                                  <li><a href="">機械手臂</a></li>
+                              </ul>
+                          </li>
+                          <li><a href="#">產業應用</a></li>
+                          <li><a href="#">技術支援</a></li>
+                      </ul>
+                </div>
+            </div>
+            <a href="#" class="hamburger">
+                <span onclick="openNav()" class="material-symbols-outlined">menu</span>
+            </a>
+        </div>
+
         <header>
-            <!-- menu -->
-            <nav class="menu">
-                <ul class="logo">
-                    <li><a href="#"><img src="./img/icon-logo-color.svg"></a></li>
-                    <li><a href="#"><a href="#"><img src="./img/logo-altron-s.svg"></a></a></li>
-                </ul>
-
-                <ul class="icons">
-                    <li><a href="#"><img src="./img/icon24px-language.svg"></a></li>
-                    <li><a href="#"><img src="./img/icon24px-member.svg"></a></li>
-                    <li><a href="#"><img src="./img/icon-line.svg"></a></li>
-                    <li><a href="#"><img src="./img/icon24px-menu.svg" class="icons-menu"></a></li>
-                </ul>
-
-                <!-- <button class="close"></button>
-                <ul id="submenu">
-                    <li><a href="#"></a>關於</li>
-                    <li><a href="#"></a>產品</li>
-                    <li><a href="#"></a>產業應用</li>
-                    <li><a href="#"></a>新聞中心</li>
-                    <li><a href="#"></a>技術支援</li>
-                </ul> -->
-            </nav>
-
+            <div class="img-wrapper">
+                <img src="./img/kv-bg2.jpg" alt="">
+            </div>
             <!-- kv -->
             <div class="kv">
                 <div class="top-text">
                     <h2>革命性建築場域助手登場</h2>
                     <h6>我們的協作機器人 HRC-2 正逐漸成為建築場域的新寵，<br>徹底改變傳統工地的運作模式</h6>
                 </div>
-                <a href="#" class="button">查看產品</a>
+                <a href="#" id="testButton" class="button">查看產品</a>
             </div>
             <a href="#" class="header-contact">
                 <img src="./img/icon-contact-text.svg" class="header-contact_outer">
@@ -59,9 +151,9 @@
 
         <div class="container">
             <div class="product">
-                <h3>我們的機器人</h3>
+                <h4>我們的機器人</h4>
                 <ul>
-                    <li>
+                    <li class="product-item">
                         <div class="product-info">
                             <h4>自主移動機器人 HAC</h4>
                             <p>我們的自主移動機器人在環境中移動時<br>透過 3D 攝影機與 Li DAR 感應器擷取資訊並對收集的資訊進行分析</p>
@@ -69,7 +161,7 @@
                         </div>
                         <img src="./img/product-1.jpg" alt="">
                     </li>
-                    <li>
+                    <li class="product-item">
                         <div class="product-info">
                             <h4>協作機器人 HRC</h4>
                             <p>我們的協作機器人運用AI技術在沒有人工輔助培訓的情況下<br>對人類的語音和手勢作出回應並從中學習</p>
@@ -77,7 +169,7 @@
                         </div>
                         <img src="./img/product-2.jpg" alt="">
                     </li>
-                    <li>
+                    <li class="product-item">
                         <div class="product-info">
                             <h4>自主移動機器生物 CAB</h4>
                             <p>仿生機械生物因其靈活性、適應性與智能化<br>正在消防救援、物流、綠色農業、環境監測等產業中展現潛力</p>
@@ -85,7 +177,7 @@
                         </div>
                         <img src="./img/product-3.jpg" alt="">
                     </li>
-                    <li>
+                    <li class="product-item">
                         <div class="product-info">
                             <h4>機械手臂 ARM</h4>
                             <p>模仿人類手臂運動，並從 2D/3D 攝影機等視覺感應器推斷資訊<br>以分割和理解場景，更快、更準確地執行任務</p>
@@ -95,47 +187,47 @@
                     </li>
                 </ul>
             </div>
-    
+
             <div class="industry">
                 <div class="industry-heading">
-                    <h3>產業應用</h3>
+                    <h4>產業應用</h4>
                     <a href="#">更多應用&nbsp;+</a>
                 </div>
-                
+
                 <div class="industry-box">
-                    <div >
+                    <div>
                         <img src="./img/icon-industry1.svg" alt="" />
-                        <h6>消防搜救</h6>
+                        <p>消防搜救</p>
                     </div>
-                    <div >
+                    <div>
                         <img src="./img/icon-industry2.svg" alt="" />
-                        <h6>建築營造</h6>
-                    </div>     
-                    <div >
+                        <p>建築營造</p>
+                    </div>
+                    <div>
                         <img src="./img/icon-industry3.svg" alt="" />
-                        <h6>物流倉儲</h6>
+                        <p>物流倉儲</p>
                     </div>
-                    <div >
+                    <div>
                         <img src="./img/icon-industry4.svg" alt="" />
-                        <h6>綠色農業</h6>
+                        <p>綠色農業</p>
                     </div>
-                    <div >
+                    <div>
                         <img src="./img/icon-industry5.svg" alt="" />
-                        <h6>高端醫療</h6>
+                        <p>高端醫療</p>
                     </div>
-                    <div >
+                    <div>
                         <img src="./img/icon-industry6.svg" alt="" />
-                        <h6>生產製造</h6>
+                        <p>生產製造</p>
                     </div>
                     <!-- <div >
                         <img src="img/list_img3.jpg" alt="" />
-                        <h3>生產製造</h3>
+                        <p>生產製造</p>
                     </div>   -->
                 </div>
             </div>
             <div class="news">
                 <div class="news-heading">
-                    <h3>最新消息</h3>
+                    <h4>最新消息</h4>
                     <a href="#">更多資訊&nbsp;+</a>
                 </div>
                 <ul>
@@ -178,7 +270,7 @@
                 </ul>
             </div>
             <div class="customer">
-                <h3>合作夥伴</h3>
+                <h4>合作夥伴</h4>
                 <div class="content">
                     <div class="our-customers">
                         <a href="#"><img src="./img/company-logo1.svg" alt="Logo 1"></a>
@@ -199,7 +291,7 @@
                     </div>
                 </div>
             </div>
-            
+
         </div>
         <div class="footer">
             <div class="footer-content">
@@ -233,5 +325,6 @@
     </div>
 
 </body>
-
+    <!-- <script src="./js/jquery-3.7.1.js"></script> -->
+    <script src="./js/script.js"></script>
 </html>

@@ -1,0 +1,251 @@
+
+.menu{
+    width: 100vw;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 24px;
+    padding: 0 24px;
+    z-index: 100;
+}
+.menu a{
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 14px;
+    color: black;
+}
+
+.menu .navigation a:hover{
+    background-color: #f3f3f3;
+}
+.menu_left{
+    gap: 8px;
+}
+.menu .logo{
+    z-index: 50;
+}
+
+.menu_right{
+    display: flex;
+    gap: 16px;
+}
+
+.menu_right .navigation{
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 8px;
+    height: 48px;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 4px;
+    gap: 4px;
+}
+.menu_right .navigation a {
+    display: block;
+    padding: 12px 24px ;
+    border-radius: 6px;
+}
+
+.navigation .dropdown{
+    position: relative;
+    display: inline-block;
+}
+.dropdown:hover .submenu {
+    display: block;
+}
+
+.dropdown .submenu{
+    background-color: #fff;
+    display: none;
+    position: absolute;
+    top: 115%;
+    width: calc(100% + 80%); /* 父選單 +80% */
+    margin-left: 0px; /* 對齊父選單 */
+    border-radius: 8px;
+}
+.dropdown .submenu a{
+
+}
+/* --------------language------------------ */
+.language .language-default{
+    color: #ffffff;
+    height: 46px;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+}
+
+.language li{
+    display: none;
+    background-color: #fff;
+    color: black;
+    position: absolute;
+    top: 115%;
+    height: 48px;
+    border-radius: 8px;
+    align-items: center;
+    width: 90px;
+    margin-left: 0px;
+}
+
+.language .language-default:hover li{
+    display: block;
+}
+
+/* --------------member------------------ */
+.member {
+    position: relative;
+    display: inline-block;
+}
+
+.member .dropbtn{
+    background-color: #fff;
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    cursor: pointer;
+}
+.dropbtn:hover {
+    background-color: #5559FF;
+}
+
+/* --------------login------------------ */
+.login{
+    display: none;
+    position: absolute;
+    top: 115%;
+    width: 320px;
+    background-color: #fff;
+    margin-right: 0px;
+    right: 0;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+
+.login .required::after{
+    content: "*";
+    color: red;
+}
+
+.login .show {
+    display: block;
+}
+/* ----------form------------ */
+.login .form{
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ---------------------mobile-nav----------------------- */
+/* 
+
+.nav .hamburger{
+    background-color: #fff ;
+
+
+    display: none;
+    justify-self: center;
+    align-self: center;
+
+    position: fixed;
+    right: 24px; 
+} */
+
+/* .nav .material-symbols-outlined{
+    background-color: lightblue;
+    display: none
+} */
+
+
+/* fallback */
+@font-face {
+    font-family: 'Material Symbols Outlined';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/materialsymbolsoutlined/v220/kJF1BvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oDMzByHX9rA6RzaxHMPdY43zj-jCxv3fzvRNU22ZXGJpEpjC_1v-p_4MrImHCIJIZrDCvHOejbd5zrDAt.woff2) format('woff2');
+  }
+  
+  .material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: none;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+
+    display: flex; /* 使用 Flexbox 排版 */
+    align-items: center; /* 垂直居中 */
+    justify-content: center; /* 水平居中 */
+
+    background-color: lightblue;
+    box-sizing: border-box;
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+}
+
+/* ---------------------overlay mobile-menu----------------------- */
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+  
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+  
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+}
+  
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+  
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+
+/* ---------------------rwd----------------------- */
