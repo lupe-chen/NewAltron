@@ -1,40 +1,40 @@
 /* ---------------登入表單------------------ */
-// 點擊member開啟選單
-function myFunction(event) {
-  // 阻止默認跳轉
-  event.preventDefault();
-
-  // 切換顯示/隱藏類名
-  document.getElementById("myDropdown").classList.toggle("show");
+function myFunction() {
+  const dropdown = document.getElementById("myDropdown");
+  dropdown.classList.toggle("show");
 }
 
-// 點擊其他地方時關閉選單
-window.onclick = function (event) {
-  if (!event.target.matches('dropbtn')) {
-    const dropdowns = document.getElementsByClassName("login");
-    for (let i = 0; i < dropdowns.length; i++) {
-      const openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
+// 點擊其他地方關閉表單
+document.addEventListener("click", function() {
+  const dropdown = document.getElementById("myDropdown");
+  const loginBtn = document.querySelector(".login-btn");
+  
+  if (!dropdown.contains(event.target) && !loginBtn.contains(event.target)) {
+      dropdown.classList.remove("show");
   }
-}
+});
 
-/* ---------------手機 mobile-navigation------------------ */
+/* ---------------hamburger----------------- */
 
-function openNav() {
-  document.getElementById("myNav").style.width = "100%";
-}
+$('#mobileMenuIcon').click(function(){
+  $(this).toggleClass('active')
+});
 
-function closeNav() {
-  document.getElementById("myNav").style.width = "0%";
-}
+/* ---------------mobile-menu------------------ */
+const mobileMenuIcon = document.getElementById('mobileMenuIcon');
+const mobileMenu = document.getElementById('mobileMenu');
 
-
-// $(document).ready(function () {
-//     console.log("script.js 已加載成功");
-//     $("#testButton").click(function () {
-//       alert("按鈕已被點擊！");
-//     });
-//   });
+// 點擊事件切換顯示和隱藏
+mobileMenuIcon.addEventListener('click', () => {
+  if (mobileMenu.classList.contains('show')) {
+    mobileMenu.classList.remove('show');
+    setTimeout(() => {
+      mobileMenu.style.display = 'none';
+    }, 1000);
+  } else {
+    mobileMenu.style.display = 'block';
+    setTimeout(() => {
+      mobileMenu.classList.add('show');
+    }, 10);
+  }
+});
